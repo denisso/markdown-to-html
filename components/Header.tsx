@@ -37,7 +37,7 @@ export const Header = () => {
     return (
         <div className={style.container}>
             <a
-                href="https://github.com/denisso/markdown-to-html-converter"
+                href="https://github.com/denisso/markdown-to-html"
                 rel="noreferrer"
                 target="_blank"
             >Githib</a>
