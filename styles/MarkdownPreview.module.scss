@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    @media (max-width: 1039px) {
+        flex-direction: column;
+    }
+    @media (min-width: 1040px) {
+        & > * {
+            width: calc(50% - 0.5rem);
+            display: flex;
+        }
+    }
+}
