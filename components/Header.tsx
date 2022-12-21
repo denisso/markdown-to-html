@@ -41,7 +41,13 @@ export const Header = () => {
                 rel="noreferrer"
                 target="_blank"
             >Githib</a>
-            Load markdown examples:{" "}
+            {" "}
+            <a
+                href="https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
+                rel="noreferrer"
+                target="_blank"
+            >Прочитать как этот конвертер работает</a>
+            Загрузить примеры кода:{" "}
             {error !== ""
                 ? error
                 : loading
