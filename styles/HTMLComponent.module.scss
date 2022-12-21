@@ -62,6 +62,7 @@
                         font-size: 1rem;
                     }
                 }
+
             }
             .codecopy {
                 position: absolute;
@@ -84,7 +85,9 @@
                 }
             }
         }
-
+        a {
+            user-select: all;
+        }
         ul,
         ol {
             list-style-position: inside;
