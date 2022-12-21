@@ -1,7 +1,7 @@
 import React from "react";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
-import rehypeReact from "rehype-react";
+import rehypeReactCustom from "../lib/plugins/rehypeReactCustom";
 import { Context } from "./Context";
 import style from "../styles/HTMLComponent.module.scss";
 import ErrorBoundary from "./ErrorBoundary";
@@ -68,18 +68,18 @@ const CodeSection = ({
 export const HTMLComponent = () => {
     const { html } = React.useContext(Context);
     const HTML = React.useMemo(() => {
-        let result = <></>;
+        let result: JSX.Element = <></>;
         try {
-            result = unified()
+            result = (unified()
                 .use(rehypeParse, { fragment: true })
-                .use(rehypeReact, {
+                .use(rehypeReactCustom, {
                     createElement: React.createElement,
                     Fragment: React.Fragment,
                     components: {
                         section: CodeSection,
                     },
                 })
-                .processSync(html).result;
+                .processSync(html).result || <></>) as JSX.Element;
         } catch (err) {}
         const HTML = () => result;
         return HTML;
