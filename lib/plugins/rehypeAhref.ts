@@ -6,9 +6,10 @@ const parse = (node: Node) => {
             case node instanceof Object:
                 if (node.type !== "element") return;
                 if (node.tagName === "a") {
-                    if (!node?.properties)
-                        Object.assign(node, { properties: { src: "#" } });
-                    if (node.properties) {
+                    if (
+                        node?.properties instanceof Object &&
+                        node?.properties?.href?.[0] !== "#"
+                    ) {
                         node.properties.target = "_blank";
                         node.properties.rel = "noreferrer";
                     }
