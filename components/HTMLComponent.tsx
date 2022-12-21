@@ -22,17 +22,17 @@ const CodeSection = ({
             .writeText(buffer)
             .then(() => {
                 setTextBtnCopy("Copied");
-                refBtnCopy.current?.classList.add("copied");
+                refBtnCopy.current?.classList?.add("copied");
                 setTimeout(() => {
-                    refBtnCopy.current?.classList.remove("copied");
+                    refBtnCopy.current?.classList?.remove("copied");
                     setTextBtnCopy("Copy");
                 }, 2000);
             })
             .catch(() => {
                 setTextBtnCopy("Copy error");
-                refBtnCopy.current?.classList.add("error");
+                refBtnCopy.current?.classList?.add("error");
                 setTimeout(() => {
-                    refBtnCopy.current?.classList.remove("error");
+                    refBtnCopy.current?.classList?.remove("error");
                     setTextBtnCopy("Copy");
                 }, 2000);
             });
