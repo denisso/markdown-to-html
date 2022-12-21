@@ -4,7 +4,7 @@ import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
 import { Context } from "./Context";
 import style from "../styles/HTMLComponent.module.scss";
-
+import ErrorBoundary from "./ErrorBoundary";
 const CodeSection = ({
     className,
     children,
@@ -81,13 +81,17 @@ export const HTMLComponent = () => {
                 })
                 .processSync(html).result;
         } catch (err) {}
-
-        return result;
+        const HTML = () => result;
+        return HTML;
     }, [html]);
     return (
         <div className={style.container}>
             <h2 className={style.title}>HTML:</h2>
-            <div className={style.content}>{HTML}</div>
+            <div className={style.content}>
+                <ErrorBoundary>
+                    <HTML />
+                </ErrorBoundary>
+            </div>
         </div>
     );
 };
