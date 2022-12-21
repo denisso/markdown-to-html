@@ -21,7 +21,8 @@ export default function rehypeReactCustom(options: Options) {
     }
 
     const createElement = options.createElement;
-
+    
+    // @ts-expect-error: hush.
     Object.assign(this, { Compiler: compiler });
 
     /** @type {import('unified').CompilerFunction<Root, ReactNode>} */
