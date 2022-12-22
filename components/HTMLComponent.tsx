@@ -92,6 +92,7 @@ export const HTMLComponent = () => {
                             "allow",
                             "allowfullscreen",
                         ],
+                        a: ["href", "rel", "target"]
                     },
                 })
                 .use(rehypeReact, {
