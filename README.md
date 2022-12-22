@@ -7,9 +7,8 @@
 Установка и настройка 
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
 Открываем в браузере [http://localhost:3000](http://localhost:3000)
