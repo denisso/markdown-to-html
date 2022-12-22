@@ -1,7 +1,8 @@
 import React from "react";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
-import rehypeReactCustom from "../lib/plugins/rehypeReactCustom";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import rehypeReact from "rehype-react";
 import { Context } from "./Context";
 import style from "../styles/HTMLComponent.module.scss";
 import ErrorBoundary from "./ErrorBoundary";
@@ -72,7 +73,28 @@ export const HTMLComponent = () => {
         try {
             result = (unified()
                 .use(rehypeParse, { fragment: true })
-                .use(rehypeReactCustom, {
+                .use(rehypeSanitize, {
+                    ...defaultSchema,
+                    tagNames: [
+                        ...(defaultSchema.tagNames || []),
+                        "section",
+                        "iframe",
+                    ],
+
+                    attributes: {
+                        ...defaultSchema.attributes,
+                        "*": ["className"],
+                        iframe: [
+                            "width",
+                            "height",
+                            "src",
+                            "title",
+                            "allow",
+                            "allowfullscreen",
+                        ],
+                    },
+                })
+                .use(rehypeReact, {
                     createElement: React.createElement,
                     Fragment: React.Fragment,
                     components: {
