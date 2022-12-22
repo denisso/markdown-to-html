@@ -5,13 +5,14 @@ export const rehypeAhref = () => {
     return (tree: NodeVisitor) => {
         try {
             visit(tree, { tagName: "a" }, (node: Node) => {
-                if (
-                    node?.properties instanceof Object &&
-                    node?.properties?.href?.[0] !== "#"
-                ) {
-                    node.properties.target = "_blank";
-                    node.properties.rel = "noreferrer";
+                if(!node?.properties){
+                    node.properties = {}
                 }
+                const props = node.properties
+                if(props.href[0] !== "#"){
+                    props.target = "_blank";
+                    props.rel = "noreferrer";
+                }   
             });
         } catch (err) {}
     };
