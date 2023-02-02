@@ -40,7 +40,7 @@ export const Header = () => {
                 href="https://github.com/denisso/markdown-to-html"
                 rel="noreferrer"
                 target="_blank"
-            >Githib</a>
+            >Github</a>
             {" "}
             <a
                 href="https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
