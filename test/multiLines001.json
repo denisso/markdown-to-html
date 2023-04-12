@@ -1,0 +1,93 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {},
+      "children": [
+        {
+          "type": "element",
+          "tagName": "span",
+          "properties": {
+            "id": [
+              "line-1"
+            ]
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "123"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "br",
+          "properties": {},
+          "children": []
+        },
+        {
+          "type": "element",
+          "tagName": "span",
+          "properties": {
+            "id": [
+              "line-2"
+            ]
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "456"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "br",
+          "properties": {},
+          "children": []
+        },
+        {
+          "type": "element",
+          "tagName": "span",
+          "properties": {
+            "id": [
+              "line-3"
+            ]
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "789"
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 13
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 4,
+      "offset": 13
+    }
+  }
+}

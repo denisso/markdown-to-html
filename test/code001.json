@@ -1,0 +1,230 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "section",
+      "properties": {
+        "className": [
+          "codeblock"
+        ]
+      },
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codelines"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-1"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-2"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-3"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-4"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-5"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "4"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-6"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "5"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-7"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codebox"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "pre",
+              "properties": {},
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "code",
+                  "properties": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Smith\",\r\n  \"age\": 25\r\n}\n"
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 4,
+                      "offset": 75
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 7,
+                  "column": 4,
+                  "offset": 75
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 4,
+          "offset": 75
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 7,
+      "column": 4,
+      "offset": 75
+    }
+  }
+}

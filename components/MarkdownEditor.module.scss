@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: 100%;
+  :global {
+    [id^="simplemde-editor"] {
+      height: 100%;
+      .EasyMDEContainer {
+        height: calc(100% - 5rem);
+        .editor-toolbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
+        }
+        .CodeMirror-line{
+          min-height: 1.5rem;
+          .cm-formatting-header-1, .cm-header-1{
+            font-size: calc(.5rem + 1vw);
+          }
+          .cm-formatting-header-2, .cm-header-2{
+            font-size: calc(.45rem + 1vw);
+          }
+          .cm-formatting-header-3, .cm-header-3{
+            font-size: calc(.4rem + 1vw);
+          }
+          .cm-formatting-header-4, .cm-header-4{
+            font-size: calc(.3rem + 1vw);
+          }
+          .cm-formatting-header-5, .cm-header-5{
+            font-size: calc(.2rem + 1vw);
+          }
+          .cm-formatting-header-6, .cm-header-6{
+            font-size: calc(.1rem + 1vw);
+          }
+        }
+        .CodeMirror.CodeMirror-wrap {
+          height: 100%;
+          overflow: hidden;
+          .CodeMirror-scroll {
+            height: 100%;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+  }
+}

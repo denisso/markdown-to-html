@@ -1,0 +1,21 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  flex-shrink: 0;
+  padding: 1rem;
+}
+.main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.editor,
+.output {
+  flex: 0 0 50%;
+  height: 100%;
+  max-width: 50%;
+}
+

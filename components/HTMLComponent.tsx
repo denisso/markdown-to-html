@@ -3,118 +3,73 @@ import { unified } from "unified";
 import rehypeParse from "rehype-parse";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeReact from "rehype-react";
-import { Context } from "./Context";
-import style from "../styles/HTMLComponent.module.scss";
+import { useContext } from "./Context";
+import style from "./HTMLComponent.module.scss";
 import ErrorBoundary from "./ErrorBoundary";
-const CodeSection = ({
-    className,
-    children,
-}: JSX.IntrinsicElements["section"]) => {
-    const refCodeBlock = React.useRef<HTMLElement | null>(null);
-    const refCodeBox = React.useRef<HTMLElement | null>(null);
-    const refBtnCopy = React.useRef<HTMLButtonElement | null>(null);
-    const [copyBtn, setCopyBtn] = React.useState(false);
-    const [textBthCopy, setTextBtnCopy] = React.useState("Copy");
-    const handlerCopy = () => {
-        const range = document.createRange();
-        range.selectNodeContents(refCodeBox.current as Node);
-        const buffer = range.valueOf().toString();
-        navigator.clipboard
-            .writeText(buffer)
-            .then(() => {
-                setTextBtnCopy("Copied");
-                refBtnCopy.current?.classList?.add("copied");
-                setTimeout(() => {
-                    refBtnCopy.current?.classList?.remove("copied");
-                    setTextBtnCopy("Copy");
-                }, 2000);
-            })
-            .catch(() => {
-                setTextBtnCopy("Copy error");
-                refBtnCopy.current?.classList?.add("error");
-                setTimeout(() => {
-                    refBtnCopy.current?.classList?.remove("error");
-                    setTextBtnCopy("Copy");
-                }, 2000);
-            });
-    };
-    return (
-        <section
-            className={className}
-            ref={(node: HTMLElement) => {
-                if (node && refCodeBlock.current === null) {
-                    refCodeBlock.current = node;
-                    refCodeBox.current = node.querySelector(".codebox");
-                    if (refCodeBox.current) {
-                        setCopyBtn(true);
-                    }
-                }
-            }}
-        >
-            {copyBtn && (
-                <button
-                    className="codecopy"
-                    onClick={handlerCopy}
-                    ref={refBtnCopy}
-                >
-                    {textBthCopy}
-                </button>
-            )}
-
-            {children}
-        </section>
-    );
-};
+import { useSmoothScroll } from "./useSmoothScroll";
+import { CodeSection } from "./CodeSection";
 
 export const HTMLComponent = () => {
-    const { html } = React.useContext(Context);
-    const HTML = React.useMemo(() => {
-        let result: JSX.Element = <></>;
-        try {
-            result = (unified()
-                .use(rehypeParse, { fragment: true })
-                .use(rehypeSanitize, {
-                    ...defaultSchema,
-                    tagNames: [
-                        ...(defaultSchema.tagNames || []),
-                        "section",
-                        "iframe",
-                    ],
+  const { html } = useContext();
+  const processor = React.useMemo(() => {
+    let p = null;
+    try {
+      p = unified()
+        .use(rehypeParse, { fragment: true })
+        .use(rehypeSanitize, {
+          ...defaultSchema,
+          tagNames: [...(defaultSchema.tagNames || []), "section", "iframe"],
 
-                    attributes: {
-                        ...defaultSchema.attributes,
-                        "*": ["className"],
-                        iframe: [
-                            "width",
-                            "height",
-                            "src",
-                            "title",
-                            "allow",
-                            "allowfullscreen",
-                        ],
-                        a: ["href", "rel", "target"]
-                    },
-                })
-                .use(rehypeReact, {
-                    createElement: React.createElement,
-                    Fragment: React.Fragment,
-                    components: {
-                        section: CodeSection,
-                    },
-                })
-                .processSync(html).result || <></>) as JSX.Element;
-        } catch (err) {}
-        const HTML = () => result;
-        return HTML;
-    }, [html]);
-    return (
-        <div className={style.container}>
-            <h2 className={style.title}>HTML:</h2>
-            <div className={style.content}>
-                <ErrorBoundary>
-                    <HTML />
-                </ErrorBoundary>
-            </div>
-        </div>
-    );
+          attributes: {
+            ...defaultSchema.attributes,
+            "*": ["className", "id"],
+            iframe: [
+              "width",
+              "height",
+              "src",
+              "title",
+              "allow",
+              "allowfullscreen",
+            ],
+            a: ["href", "rel", "target"],
+          },
+        })
+        .use(rehypeReact, {
+          createElement: React.createElement,
+          Fragment: React.Fragment,
+          components: {
+            section: CodeSection,
+          },
+        });
+    } catch (e) {}
+    return p;
+  }, []);
+
+  const HTML = React.useMemo<() => JSX.Element>(() => {
+    /**
+     * sanitize html, add code plugins
+     */
+    let Result = () => <></>;
+    if (!processor) return Result;
+
+    try {
+      const r = (processor.processSync(html).result || <></>) as JSX.Element;
+      Result = () => r;
+    } catch (err) {}
+
+    return Result;
+  }, [html, processor]);
+
+  const { setHTMLOutputElement } = useSmoothScroll();
+
+  return (
+    <div className={style.container}>
+      <h2 className={style.title}>HTML:</h2>
+      <div className={style.content} ref={setHTMLOutputElement}>
+        <ErrorBoundary>
+          <HTML />
+        </ErrorBoundary>
+      </div>
+    </div>
+  );
 };

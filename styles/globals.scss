@@ -1,5 +1,6 @@
 html,
 body {
+    height: 100%;
     color: #212121;
     padding: 0;
     margin: 0;
@@ -14,6 +15,7 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
 
 @mixin highlight {
     color: #747474;

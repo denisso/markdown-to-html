@@ -1,0 +1,79 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {
+        "id": [
+          "line-1"
+        ]
+      },
+      "children": [
+        {
+          "type": "element",
+          "tagName": "a",
+          "properties": {
+            "href": "https://www.example.com",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "title",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 6
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 33,
+              "offset": 32
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 33,
+          "offset": 32
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 1,
+      "column": 33,
+      "offset": 32
+    }
+  }
+}

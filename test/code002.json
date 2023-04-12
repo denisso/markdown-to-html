@@ -1,0 +1,1119 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {
+        "id": [
+          "line-1"
+        ]
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": "Создание React комопнента для для блока кода описана в статье ",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 63,
+              "offset": 62
+            }
+          }
+        },
+        {
+          "type": "element",
+          "tagName": "a",
+          "properties": {
+            "href": "https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html#header--kompilyaciya-ast-html-v-react-komponenty",
+            "target": "_blank",
+            "rel": "noreferrer"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Конвертируем markdown в html и подключаем компоненты React с библиотекой Unified это просто",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 64,
+                  "offset": 63
+                },
+                "end": {
+                  "line": 1,
+                  "column": 155,
+                  "offset": 154
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 63,
+              "offset": 62
+            },
+            "end": {
+              "line": 1,
+              "column": 295,
+              "offset": 294
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 295,
+          "offset": 294
+        }
+      }
+    },
+    {
+      "type": "element",
+      "tagName": "p",
+      "position": {
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 0,
+          "offset": 0
+        }
+      },
+      "properties": {
+        "className": [
+          "emptyLine"
+        ],
+        "done": true,
+        "id": [
+          "line-2"
+        ]
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tagName": "section",
+      "properties": {
+        "className": [
+          "codeblock"
+        ]
+      },
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codelines"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-3"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-4"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-5"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-6"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-7"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codebox"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "pre",
+              "properties": {
+                "className": [
+                  "language-js"
+                ]
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "code",
+                  "properties": {
+                    "className": [
+                      "language-js"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "keyword"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "const"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "function-variable",
+                          "function"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "getLanguage"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "operator"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "="
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "("
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "parameter"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "span",
+                          "properties": {
+                            "className": [
+                              "token",
+                              "literal-property",
+                              "property"
+                            ]
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "node"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tagName": "span",
+                          "properties": {
+                            "className": [
+                              "token",
+                              "operator"
+                            ]
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": ":"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " NodeCustom"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ")"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "operator"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "=>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "{"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\r\n    "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "keyword"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "return"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "keyword"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "null"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ";"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\r\n"
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ";"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 3,
+                      "column": 1,
+                      "offset": 298
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 4,
+                      "offset": 375
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 298
+                },
+                "end": {
+                  "line": 7,
+                  "column": 4,
+                  "offset": 375
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 298
+        },
+        "end": {
+          "line": 7,
+          "column": 4,
+          "offset": 375
+        }
+      }
+    },
+    {
+      "type": "element",
+      "tagName": "p",
+      "position": {
+        "start": {
+          "line": 8,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 0,
+          "offset": 0
+        }
+      },
+      "properties": {
+        "className": [
+          "emptyLine"
+        ],
+        "done": true,
+        "id": [
+          "line-8"
+        ]
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tagName": "section",
+      "properties": {
+        "className": [
+          "codeblock"
+        ]
+      },
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codelines"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-9"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-10"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-11"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-12"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-13"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "4"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "properties": {
+                "className": [
+                  "codeline"
+                ],
+                "id": [
+                  "line-14"
+                ]
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "div",
+          "properties": {
+            "className": [
+              "codebox"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "pre",
+              "properties": {
+                "className": [
+                  "language-json"
+                ]
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "code",
+                  "properties": {
+                    "className": [
+                      "language-json"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "{"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\r\n  "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "property"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"include\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "operator"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ":"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "["
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "string"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"next-env.d.ts\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ","
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "string"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"**/*.ts\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ","
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "string"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"**/*.tsx\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "]"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ","
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\r\n  "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "property"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"exclude\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "operator"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ":"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "["
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "string"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"node_modules\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "]"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\r\n"
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "span",
+                      "properties": {
+                        "className": [
+                          "token",
+                          "punctuation"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 9,
+                      "column": 1,
+                      "offset": 379
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 4,
+                      "offset": 484
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 1,
+                  "offset": 379
+                },
+                "end": {
+                  "line": 14,
+                  "column": 4,
+                  "offset": 484
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 379
+        },
+        "end": {
+          "line": 14,
+          "column": 4,
+          "offset": 484
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 4,
+      "offset": 484
+    }
+  }
+}

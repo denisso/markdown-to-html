@@ -1,0 +1,93 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {
+        "id": [
+          "line-1"
+        ]
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": "123 ",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 4
+            }
+          }
+        },
+        {
+          "type": "element",
+          "tagName": "img",
+          "properties": {
+            "src": "image.jpg",
+            "alt": "alt text"
+          },
+          "children": [],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 5,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 27,
+              "offset": 26
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": " 234",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 27,
+              "offset": 26
+            },
+            "end": {
+              "line": 1,
+              "column": 31,
+              "offset": 30
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 31,
+          "offset": 30
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 1,
+      "column": 31,
+      "offset": 30
+    }
+  }
+}

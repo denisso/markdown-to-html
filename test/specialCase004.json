@@ -1,0 +1,144 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {},
+      "children": [
+        {
+          "type": "element",
+          "tagName": "span",
+          "properties": {
+            "id": [
+              "line-1"
+            ]
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Теперь можно без проблем использовать плагин ",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 46,
+                  "offset": 45
+                }
+              }
+            },
+            {
+              "type": "element",
+              "tagName": "a",
+              "properties": {
+                "href": "https://github.com/rehypejs/rehype-react",
+                "target": "_blank",
+                "rel": "noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "rehype-react",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 47,
+                      "offset": 46
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 59,
+                      "offset": 58
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 46,
+                  "offset": 45
+                },
+                "end": {
+                  "line": 1,
+                  "column": 103,
+                  "offset": 102
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " для компиляции html в React компоненты. В демо приложении он используется для копирования кода по клику на кнопку Copy."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tagName": "br",
+          "properties": {},
+          "children": []
+        },
+        {
+          "type": "element",
+          "tagName": "span",
+          "properties": {
+            "id": [
+              "line-2"
+            ]
+          },
+          "children": [
+            {
+              "type": "element",
+              "tagName": "img",
+              "properties": {
+                "src": "https://res.cloudinary.com/mrdramm/image/upload/v1671603431/site0001/articles/20221221-unified/btn-copy_aoavdl.jpg",
+                "alt": "button copy"
+              },
+              "children": [],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 224
+                },
+                "end": {
+                  "line": 2,
+                  "column": 131,
+                  "offset": 354
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 131,
+          "offset": 354
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 131,
+      "offset": 354
+    }
+  }
+}

@@ -1,65 +1,76 @@
 import React from "react";
-import style from "../styles/Header.module.scss";
 import axios, { AxiosResponse, AxiosError } from "axios";
-import { Context } from "./Context";
+import { useContext } from "./Context";
 
 export const Header = () => {
-    const { setMarkdown } = React.useContext(Context);
-    const [files, setFiles] = React.useState<Array<string>>([]);
-    const [error, setError] = React.useState("");
-    const [loading, setLoading] = React.useState(false);
-    const getMarkdownFromServer = (file: string) => {
-        setLoading(true);
-        axios
-            .get("/api/getfile?filename=" + file)
-            .then(({ data }: AxiosResponse<{ data: string }>) => {
-                if (typeof data.data === "string")
-                    setMarkdown({ data: data.data });
-                setLoading(false);
-            })
-            .catch((err: AxiosError) => {
-                setMarkdown({ data: err.message });
-                setLoading(false);
-            });
-    };
+  const { setMarkdown } = useContext();
+  const [files, setFiles] = React.useState<Array<string>>([]);
+  const [error, setError] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+  const getMarkdownFromServer = (file: string) => {
+    setLoading(true);
+    axios
+      .get("/api/getfile?filename=" + file)
+      .then(({ data }: AxiosResponse<{ data: string }>) => {
+        if (typeof data.data === "string") setMarkdown(data.data);
+        setLoading(false);
+      })
+      .catch((err: AxiosError) => {
+        setMarkdown(err.message);
+        setLoading(false);
+      });
+  };
 
-    React.useEffect(() => {
-        axios
-            .get("/api/getfiles")
-            .then(({ data }: AxiosResponse<{ data: Array<string> }>) => {
-                if (Array.isArray(data.data)) setFiles(data.data);
-            })
-            .catch((err: AxiosError) => {
-                setError(err.message);
-            });
-    }, []);
+  React.useEffect(() => {
+    axios
+      .get("/api/getfiles")
+      .then(({ data }: AxiosResponse<{ data: Array<string> }>) => {
+        if (Array.isArray(data.data)) setFiles(data.data);
+      })
+      .catch((err: AxiosError) => {
+        setError(err.message);
+      });
+  }, []);
 
-    return (
-        <div className={style.container}>
-            <a
-                href="https://github.com/denisso/markdown-to-html"
-                rel="noreferrer"
-                target="_blank"
-            >Github</a>
-            {" "}
-            <a
-                href="https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
-                rel="noreferrer"
-                target="_blank"
-            >Прочитать как этот конвертер работает</a>
-            Загрузить примеры кода:{" "}
-            {error !== ""
-                ? error
-                : loading
-                ? "Loading"
-                : files.map((filename: string) => (
-                      <a
-                          key={filename}
-                          onClick={() => getMarkdownFromServer(filename)}
-                      >
-                          {filename}
-                      </a>
-                  ))}
-        </div>
-    );
+  return (
+    <div>
+      <h1>Markdown converter @pre-alpha</h1>
+      <div>
+        <a
+          href="https://github.com/denisso/markdown-to-html"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Github
+        </a>
+        {" / "}
+        <a
+          href="https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Прочитать как работает этот конвертер
+        </a>
+        {" / "}
+        <a href="https://mrdramm.netlify.app/" rel="noreferrer" target="_blank">
+          developed by @mr_dramm
+        </a>
+      </div>
+      <div>
+        Загрузить примеры кода:{" "}
+        {error !== ""
+          ? error
+          : loading
+          ? "Loading"
+          : files.map((filename: string, i: number) => (
+              <span key={filename}>
+                <a onClick={() => getMarkdownFromServer(filename)}>
+                  {filename}
+                </a>
+                {i < files.length - 1 && " / "}
+              </span>
+            ))}
+      </div>
+    </div>
+  );
 };

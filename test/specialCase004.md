@@ -1,0 +1,2 @@
+Теперь можно без проблем использовать плагин [rehype-react]( https://github.com/rehypejs/rehype-react) для компиляции html в React компоненты. В демо приложении он используется для копирования кода по клику на кнопку Copy.
+![button copy](https://res.cloudinary.com/mrdramm/image/upload/v1671603431/site0001/articles/20221221-unified/btn-copy_aoavdl.jpg)
