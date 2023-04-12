@@ -83,7 +83,18 @@ export const MarkdownEditor = () => {
   const getCodemirrorInstance: GetCodemirrorInstance = (inst) => {
     if (refEditor.current) return;
     refEditor.current = inst;
-    // window.editor = inst
+    
+    const codeMirrorVScrollbar = document.querySelector(
+      ".CodeMirror-vscrollbar"
+    ) as HTMLDivElement;
+
+    const htmlComponent = document.getElementById(
+      "html-component"
+    ) as HTMLDivElement;
+
+    htmlComponent.addEventListener("wheel", (e:WheelEvent)=>{
+      codeMirrorVScrollbar.scrollTop += e.deltaY
+    })
     setEditor(inst)
   };
 

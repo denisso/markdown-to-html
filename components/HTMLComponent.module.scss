@@ -31,8 +31,7 @@
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
-  // text-indent: 2rem;
-  overflow-y: auto;
+  transition: transform .3s;
   padding: 1rem;
   :global {
     * {

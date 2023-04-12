@@ -28,16 +28,33 @@ export const useSmoothScroll = () => {
 
   React.useEffect(() => {
     if (!editor) return;
+
     const linesElement = document.querySelector(
       ".CodeMirror-code"
     ) as HTMLDivElement;
+
     if (linesElement) refCodeMirrorCode.current = linesElement;
 
     editor.on("cursorActivity", () => {
       const cursor = editor.getCursor();
+      const lineElement = document.getElementById(
+        "user-content-line-" + cursor.line
+      );
+
+      if (!lineElement) return;
+
+      const lineElementRect = lineElement.getBoundingClientRect();
+      const htmlOutput = refHTMLOutputElement.current as HTMLDivElement;
+      const htmlOutputFirstElementRect =
+        htmlOutput.children[0].getBoundingClientRect();
+      let offset =
+        lineElementRect.y -
+        htmlOutputFirstElementRect.y -
+        document.documentElement.clientHeight / 3;
+      if(offset < 0) offset = 0
+      htmlOutput.style.transform = `translateY(${-offset}px)`;
     });
 
-    editor.on("viewportChange", () => {});
     editor.on("scroll", () => {
       const r = getTopVisibleLine(editor);
       const topLine = r.topVisibleLine;
@@ -74,8 +91,8 @@ export const useSmoothScroll = () => {
         lineElementRect.y -
         htmlOutputFirstElementRect.y +
         (lineElement.offsetHeight * p) / 100;
-      // htmlOutput.style.transform = `translateY(${-offset}px)`;
-      htmlOutput.scrollTop = offset;
+      htmlOutput.style.transform = `translateY(${-offset}px)`;
+      // htmlOutput.scrollTop = offset;
     });
   }, [editor]);
 

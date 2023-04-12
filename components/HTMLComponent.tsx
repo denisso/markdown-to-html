@@ -65,7 +65,7 @@ export const HTMLComponent = () => {
   return (
     <div className={style.container}>
       <h2 className={style.title}>HTML:</h2>
-      <div className={style.content} ref={setHTMLOutputElement}>
+      <div className={style.content} ref={setHTMLOutputElement} id="html-component">
         <ErrorBoundary>
           <HTML />
         </ErrorBoundary>
