@@ -45,14 +45,14 @@ export const Header = () => {
         </a>
         {" / "}
         <a
-          href="https://mrdramm.netlify.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
+          href="https://mrdramm.vercel.app/posts/biblioteka-unified-dlya-preobrazovanii-markdown-v-html"
           rel="noreferrer"
           target="_blank"
         >
           Прочитать как работает этот конвертер
         </a>
         {" / "}
-        <a href="https://mrdramm.netlify.app/" rel="noreferrer" target="_blank">
+        <a href="https://mrdramm.vercel.app/" rel="noreferrer" target="_blank">
           developed by @mr_dramm
         </a>
       </div>
