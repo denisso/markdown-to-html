@@ -27,8 +27,9 @@ npm run dev
 ```
 
 ## Блоки с кодом
-Описание стандартное
-\```
+<pre>
+<code>
+```js
 const getLanguage = (node: NodeCustom) => {
     const className = node?.properties?.className || [];
     for (const classListItem of className) {
@@ -38,7 +39,10 @@ const getLanguage = (node: NodeCustom) => {
     }
     return null;
 };
-\```
+```
+</code>
+</pre>
+
 
 
 
