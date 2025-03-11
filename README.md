@@ -28,7 +28,7 @@ npm run dev
 
 ## Блоки с кодом
 Описание стандартное
-\```js
+\```
 const getLanguage = (node: NodeCustom) => {
     const className = node?.properties?.className || [];
     for (const classListItem of className) {
